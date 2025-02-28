@@ -28,7 +28,7 @@ const Index = () => {
     const fetchPosts = async () => {
       setIsFetching(true);
       try {
-        const response = await fetch('http://localhost:5000/api/posts');
+        const response = await fetch('http://10.10.34.105/api/posts');
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }
@@ -82,7 +82,7 @@ const Index = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const response = await fetch(`http://10.10.34.105/api/posts/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ const Index = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5000/api/posts', {
+      const response = await fetch('http://10.10.34.105/api/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
